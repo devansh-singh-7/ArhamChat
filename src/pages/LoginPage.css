@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+:root {
+  color: #1f2933;
+  background: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1f2933;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(148, 163, 184, 0.14), transparent 38%),
+    radial-gradient(circle at 88% 82%, rgba(59, 130, 246, 0.12), transparent 42%),
+    linear-gradient(145deg, #f8fafc, #eef2ff 62%, #f1f5f9);
+}
+
+.login-card {
+  width: min(100%, 420px);
+  padding: 34px 28px 26px;
+  border: 1px solid rgba(203, 213, 225, 0.88);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.92));
+  backdrop-filter: blur(5px);
+  box-shadow:
+    0 24px 42px rgba(15, 23, 42, 0.13),
+    0 2px 10px rgba(148, 163, 184, 0.2);
+}
+
+.login-card__header {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.login-card__eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.login-card__title {
+  margin: 0;
+  font-size: clamp(1.85rem, 4vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.login-card__subtitle {
+  margin: 8px 0 0;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-field {
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.login-input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.login-input::placeholder {
+  color: #9ca3af;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #334155;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(51, 65, 85, 0.12);
+}
+
+.login-error {
+  margin: -4px 0 0;
+  font-size: 0.92rem;
+  color: #dc2626;
+}
+
+.login-success {
+  margin: -4px 0 0;
+  font-size: 0.92rem;
+  color: #0f766e;
+}
+
+.login-button {
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.14s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.login-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.26);
+}
+
+.login-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.18);
+}
+
+.login-button:disabled {
+  cursor: wait;
+  opacity: 0.9;
+}
+
+.auth-switch {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 0.94rem;
+  color: #4b5563;
+}
+
+.auth-helper {
+  margin: 12px 0 0;
+  text-align: right;
+  font-size: 0.92rem;
+}
+
+.auth-switch__link {
+  color: #0f172a;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.auth-switch__link:hover {
+  text-decoration: underline;
+}
+
+.auth-switch__link:focus-visible {
+  outline: 2px solid #1a1a2e;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.login-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 999px;
+  animation: login-spin 0.75s linear infinite;
+}
+
+@keyframes login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-card {
+    padding: 28px 20px 22px;
+    border-radius: 18px;
+  }
+}
