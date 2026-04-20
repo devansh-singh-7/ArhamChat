@@ -918,10 +918,6 @@ export function ChatPage({
         }
 
         @media (max-width: 960px) {
-          .chat-thread-screen {
-            height: 100svh;
-          }
-
           .chat-thread-header {
             padding: calc(10px + env(safe-area-inset-top, 0px)) 12px 10px;
           }

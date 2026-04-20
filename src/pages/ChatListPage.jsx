@@ -1339,7 +1339,7 @@ export function ChatListPage() {
 
         @media (max-width: 640px) {
           .chat-app-screen {
-            height: 100svh;
+            height: 100dvh;
           }
 
           .chat-app-header {
